@@ -55,6 +55,7 @@ h3 {
     max-width: var(--maxwidth);
     background-color: var(--white);
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -154,5 +155,25 @@ main {
         img {
             width: 100%;
         }
+    }
+}
+
+#cart {
+    max-width: 550px;
+    background: var(--black);
+    border-left: 0.5rem solid var(--green);
+    border-bottom: 0.5rem solid var(--green);
+    padding: 1rem;
+    position: absolute;
+    top: 74px;
+    right: 0px;
+
+    &.hidden{
+        visibility: hidden;
+    }
+
+    table{
+        width: 100;
+        color: var(--white);
     }
 }
