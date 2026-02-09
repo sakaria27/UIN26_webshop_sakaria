@@ -1,0 +1,9 @@
+.todoform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.todoform input, .todoform textarea {
+  padding: 1rem;
+  border-radius: 5px;
+}/*# sourceMappingURL=form.css.map */
