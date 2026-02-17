@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react'
 
 import Cart from './components/Cart'
 import Products from './components/Products'
-import Header from './components/Header'
+import Header from './components/header'
 import Nav from './components/Nav'
 import CategoryTitle from './components/CategoryTitle'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,8 +50,9 @@ function App() {
    setTotalSum(total)
   }, [cart]);
 
-  return (
-    <div id="container">
+  function Page(){
+    return(
+       <div id="container">
       <Header setIsOpen={setIsOpen} cartQuantity={cartQuantity} />
       <Nav />
       <main>
@@ -59,6 +61,13 @@ function App() {
       </main>
       <Cart isOpen={isOpen} cart={cart} setCart={setCart} totalSum={totalSum} />
     </div>
+    )
+  }
+
+  return (
+    <Routes>
+      <Route index element={<Page />} />
+    </Routes>
   )
 }
 

@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
   export default function Nav(){
     return(
        <nav>
+        <Link to="city">City</Link>
           <a href="#">City</a>
           <a href="#">Ninjago</a>
           <a href="#">Castles & Knights</a>
